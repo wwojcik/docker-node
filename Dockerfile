@@ -5,7 +5,8 @@ MAINTAINER Wojciech Wójcik <wojtaswojcik@gmail.com>
 RUN apk --update add nodejs \
     && npm -g install gulp \
                       grunt \
-                      bower
+                      bower \
+    && rm -rf /var/cache/apk/*
 EXPOSE 3000
 VOLUME ["/app"]
 WORKDIR /app
